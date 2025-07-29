@@ -6,7 +6,7 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  const div = document.querySelector("#face");
+  const numDiv = document.querySelector("#face");
 
   const numArr = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
   
@@ -14,9 +14,9 @@ window.onload = function() {
   const randomLongNum = randomDec * numArr.length;
   const randomNumNoDec = Math.floor(randomLongNum);
 
-  div.innerHTML = numArr[randomNumNoDec];
+  numDiv.innerHTML = numArr[randomNumNoDec];
 
-  const div2 = document.querySelector("#suit");
+  const suitDiv = document.querySelector("#suit");
 
   const suitArr = ["♦", "♥", "♠", "♣"];
 
@@ -24,5 +24,13 @@ window.onload = function() {
   const randomLongSuit = randomDecSuit * suitArr.length;
   const randomSuitNoDec = Math.floor(randomLongSuit);
 
-  div2.innerHTML = suitArr[randomSuitNoDec];
-}
+  suitDiv.innerHTML = suitArr[randomSuitNoDec];
+
+  const refreshButton = document.querySelector("#refresh");
+
+  refreshButton.addEventListener("click", () => {
+      location.reload();
+  } 
+);
+  }
+
