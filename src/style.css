@@ -1,5 +1,36 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
+.card {
+  width: 150px;
+  height: 220px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  font-family: 'Times New Roman', serif;
+  font-size: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card .top {
+  align-self: flex-start;
+}
+
+
+.card .value {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.card .bottom {
+  align-self: flex-end;
+  transform: rotate(180deg);
+}
+
 body{
     background: white;
 }
@@ -11,3 +42,5 @@ body{
 .diamonds{
     color: red;
 }
+
+
